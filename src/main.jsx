@@ -7,7 +7,7 @@ import ThemeProvider from './context/ThemeContext'
 
 import './main.css'
 
-ReactDOM.createRoot(document.getElementById('root')).render(
+ReactDOM.createRoot(document.getElementById('bakunya')).render(
   <React.StrictMode>
       <Router>
         <ThemeProvider initialTheme="dark">
