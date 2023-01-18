@@ -16,20 +16,36 @@ const clients = [
         description: 'Development a Shortlink App as fullstack javascript developer using nextjs, firebase, css, and tailwindcss.'
     },
     {
+        id: 6,
+        html_url: null,
+        image_url: '/img/socialize.png',
+        name: 'Socialize',
+        full_name: 'Socialize',
+        description: 'Contributing to slicing from PSD to web using html, css, js, and bootstrap.'
+    },
+    {
+        id: 9,
+        html_url: null,
+        image_url: '/img/plusesmedia.png',
+        name: 'Pluses Media',
+        full_name: 'Pluses Media',
+        description: 'Contributing to slicing from PSD to web using html, css, js, and bootstrap.'
+    },
+    {
+        id: 10,
+        html_url: null,
+        image_url: '/img/cicilsewa.png',
+        name: 'Cicil Sewa',
+        full_name: 'Cicil Sewa',
+        description: 'Contributing to slicing from PSD to web using html, css, js, and bootstrap.'
+    },
+    {
         id: 1,
         image_url: '/img/cc.png',
         html_url: 'https://circlecreative.id/',
         name: 'Circle creative website company',
         full_name: 'Circle creative website company',
         description: 'Contributing to development in circle creative company website as frontend developer using html, css, js, and bootstrap.'
-    },
-    {
-        id: 2,
-        html_url: null,
-        image_url: '/img/xignature.jpg',
-        name: 'Xignature App',
-        full_name: 'Xignature App',
-        description: 'Contributing to development dashboard UI in Xignature App as frontend developer using vue, css, and tailwindcss.'
     },
     {
         id: 3,
@@ -40,14 +56,6 @@ const clients = [
         description: 'Contributing to development UI as frontend developer using reactjs, css, material-ui, and jitsi meet.'
     },
     {
-        id: 4,
-        html_url: null,
-        image_url: '/img/grafiko.png',
-        name: 'Grafiko',
-        full_name: 'Grafiko',
-        description: 'Contributing to slicing from PSD to web html, css, js, and bootstrap.'
-    },
-    {
         id: 5,
         html_url: null,
         image_url: '/img/namecard.png',
@@ -56,12 +64,28 @@ const clients = [
         description: 'Contributing to development Name Card App as such as UI development, API integrations, route authentication, and state management as frontend developer using reactjs, css, and material-ui.'
     },
     {
-        id: 6,
+        id: 4,
         html_url: null,
-        image_url: '/img/socialize.png',
-        name: 'Socialize',
-        full_name: 'Socialize',
-        description: 'Contributing to slicing from PSD to web using html, css, js, and bootstrap.'
+        image_url: '/img/grafiko.png',
+        name: 'Grafiko',
+        full_name: 'Grafiko',
+        description: 'Contributing to slicing from PSD to web html, css, js, and bootstrap.'
+    },
+    {
+        id: 2,
+        html_url: null,
+        image_url: '/img/xignature.jpg',
+        name: 'Xignature App',
+        full_name: 'Xignature App',
+        description: 'Contributing to development dashboard UI in Xignature App as frontend developer using vue, css, and tailwindcss.'
+    },
+    {
+        id: 11,
+        html_url: null,
+        image_url: '/img/terraform.png',
+        name: 'Terraform',
+        full_name: 'Terraform',
+        description: 'Contributing to clone from terraform to web using nextjs and tailwindcss.'
     },
 ]
 

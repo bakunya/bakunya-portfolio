@@ -17,11 +17,11 @@ const Portfolio = () => {
             <NavBar />
             <main className='container-600'>
                 <Badge />
-                <SelfDescription title="clients projects">
+                <SelfDescription id="clients" title="clients projects">
                     <MasonryProjects projects={clients} />
                 </SelfDescription>
                 <div className='my-20 w-full border border-light-dark/20 dark:border-dark-light/20' />
-                <SelfDescription title="personal projects">
+                <SelfDescription id="personal" title="personal projects">
                     {
                         state.isLoading && <CircularLoader className="mt-10 mx-auto block main-theme-typography animate-[spin_0.5s_linear_infinite]" />
                     }

@@ -10,7 +10,7 @@ const initialState = {
     data: []
 }
 const reducer = (state, action) => {
-    switch(action.type) {
+    switch (action.type) {
         case 'setData':
             return {
                 ...state,
@@ -35,10 +35,10 @@ let abortController = null
 
 const RepoProvider = ({ children }) => {
     const [state, dispatch] = React.useReducer(reducer, initialState)
-    
+
     const getGithubRepo = React.useCallback(() => {
-        if(abortController) abortController.abort()
-        if(state.data.length || state.isLoading) return
+        if (abortController) abortController.abort()
+        if (state.data.length || state.isLoading) return
         abortController = new AbortController()
 
         dispatch({
@@ -50,17 +50,20 @@ const RepoProvider = ({ children }) => {
             payload: '',
         })
 
-        fetch('https://bakunya-github-api.herokuapp.com/', { signal: abortController.signal })
+        fetch('https://bakunya.github.io/repos.json', { signal: abortController.signal })
             .then(res => {
-                if(res.status !== 200) throw Error(res.statusText)
+                if (res.status !== 200) throw Error(res.statusText)
+                dispatch({
+                    type: 'setError',
+                    payload: '',
+                })
                 return res.json()
             })
             .then(res => dispatch({
                 type: 'setData',
-                payload: res
+                payload: res.data
             }))
             .catch(e => {
-                console.log(e.message)
                 dispatch({
                     type: 'setError',
                     payload: e.message
@@ -74,19 +77,19 @@ const RepoProvider = ({ children }) => {
     }, [])
 
     React.useEffect(() => {
-    
+
         getGithubRepo()
 
         return () => {
-            if(abortController) abortController.abort()
+            if (abortController) abortController.abort()
         }
 
     }, [getGithubRepo])
 
 
     return (
-        <RepoContext.Provider value={{getGithubRepo, state}}>
-            { children }
+        <RepoContext.Provider value={{ getGithubRepo, state }}>
+            {children}
         </RepoContext.Provider>
     )
 }

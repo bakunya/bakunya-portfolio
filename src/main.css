@@ -5,6 +5,7 @@
 @layer base {
     * {
         @apply transition duration-300;
+        scroll-behavior: smooth;
     }
 
     .h1, h1 { @apply text-3xl font-semibold; }
