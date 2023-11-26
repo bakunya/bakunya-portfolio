@@ -50,7 +50,7 @@ const RepoProvider = ({ children }) => {
             payload: '',
         })
 
-        fetch('https://bakunya.github.io/repos.json', { signal: abortController.signal })
+        fetch('https://bakunya.github.io/repos.json?v=2', { signal: abortController.signal })
             .then(res => {
                 if (res.status !== 200) throw Error(res.statusText)
                 dispatch({
