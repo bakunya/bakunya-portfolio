@@ -15,7 +15,7 @@ const Home = () => {
             <main className="container-600">
                 <Badge />
                 <SelfDescription id="about" title="Intro">
-                    <p className='main-theme-typography indent-14 mt-9 leading-relaxed tracking-wide'>Bakunya is a freelance and fullstack javascript developer based on Yogyakarta. With his passion for programming, he builds stuff that finds interesting. Currently, he build a large file sharer and uploader that can be used for everyone at a low price even for free. When not online, Bakunya usually read his favorite fantasy novel with a cup of coffee and music. Although often struggles with code, he also slightly interested in digital art. Sometimes also talks about his dream to become an indie developer.</p>
+                    <p className='main-theme-typography indent-14 mt-9 leading-relaxed tracking-wide text-justify'>Bakunya is a freelance and fullstack JavaScript developer based in Yogyakarta. With his passion in programming and background of two years of experience in both professional and self-employment within non-profit organizations, Bakunya has experience in technology stacks such as JavaScript, NodeJS, PHP, Laravel, and various database management systems. When not online, Bakunya usually read his favorite fantasy novel with a cup of coffee and music. Although often struggles with code, he also slightly interested in digital art. Sometimes also talks about his dream to become an indie developer.</p>
                 </SelfDescription>
                 <SelfDescription>
                     <Link to="/portfolio" className="btn-primary flex justify-between items-center mx-auto block w-fit py-3 px-5">
