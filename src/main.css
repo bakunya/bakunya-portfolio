@@ -1,0 +1,104 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    * {
+        @apply transition duration-300;
+        scroll-behavior: smooth;
+    }
+
+    .h1, h1 { @apply text-3xl font-semibold; }
+    .h2, h2 { @apply text-2xl font-semibold; }
+    .h3, h3 { @apply text-xl font-semibold; }
+    .h4, h4 { @apply text-lg; }
+    .h5, h5 { @apply text-base; }
+    .h6, h6 { @apply text-sm; }
+
+    .main-theme-typography {
+        @apply text-light-dark dark:text-dark-light;
+    }
+
+    .main-theme-background {
+        @apply bg-light-light dark:bg-dark-dark;
+    }
+}
+
+@layer utilities {
+    .transition-main {
+        @apply transition duration-300;
+    }
+
+    .container-800 {
+        @apply w-[100vw] max-w-[800px] mx-auto py-5 px-6;
+    }
+
+    .container-600 {
+        @apply w-[100vw] max-w-[600px] mx-auto py-5 px-6;
+    }
+
+    .container-centered {
+        @apply flex items-center justify-center;
+    }
+}
+
+@layer components {
+    .navbar {
+        @apply sticky top-0 bg-light-light/70 dark:bg-dark-dark/70 flex justify-start md:rounded-bl-[15px] md:rounded-br-[15px] items-center sm:items-start;
+        @apply p-5 !important;
+        z-index: 9999;
+    }
+
+    .btn-primary {
+        @apply transition duration-300 bg-light-dark/30 text-light-dark rounded shadow-md shadow-light-dark/30 dark:bg-dark-light/30 dark:text-dark-light dark:shadow-dark-light/30 hover:shadow-none;
+    }
+
+    .btn-secondary {
+        @apply border border-transparent rounded-md transition duration-300 bg-light-dark text-light-light dark:text-dark-dark dark:bg-amber-300;
+    }
+    
+    .btn-tertiary {
+        @apply border border-light-dark rounded-md transition duration-300 text-light-dark dark:border-dark-light  dark:text-dark-light;
+    }
+
+    .popover-menu {
+        @apply bg-light-light border border-light-dark dark:border-dark-light dark:bg-dark-dark p-3 absolute right-0 min-w-[250px] flex flex-col rounded-md origin-top-right;
+    }
+
+    .subtitle::after {
+        content: '';
+        @apply w-[50px] h-[0.2rem] rounded bg-light-dark/50 dark:bg-dark-light/50 block;
+    }
+
+    .contact::after {
+        content: '';
+        @apply transition-all duration-300 w-0 h-[0.1rem] rounded bg-light-dark/50 dark:bg-dark-light/50 block absolute bottom-[-10px];
+    }
+
+    .contact:hover::after,
+    .contact:active::after,
+    .contact:focus::after {
+        content: '';
+        @apply w-[50%];
+    }
+}
+
+.popover-menu-enter {
+    @apply transition-all duration-300 scale-0;
+}
+.popover-menu-enter-done {
+    @apply transition-all duration-300 scale-100;
+}
+.popover-menu-enter-active {
+    @apply transition-all duration-300 scale-100;
+}
+
+.popover-menu-exit {
+    @apply transition-all duration-300 scale-100;
+}
+.popover-menu-exit-done {
+    @apply transition-all duration-300 scale-0;
+}
+.popover-menu-exit-active {
+    @apply transition-all duration-300 scale-0;
+}
