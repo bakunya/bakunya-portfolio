@@ -9,7 +9,7 @@ const NavBar = () => {
 			<Link to="/" className="h2 main-theme-typography">@Bakunya</Link>
 			<Link to="/experience" className="main-theme-typography ml-8 hidden sm:block">Experience</Link>
 			<Link to="/portfolio" className="main-theme-typography ml-4 hidden sm:block">Projects</Link>
-			<a href="https://bblog.pages.dev/" target="_blank" className="main-theme-typography ml-4 hidden sm:block">Blogs</a>
+			<a href="#" className="main-theme-typography ml-4 hidden sm:block">Blogs</a>
 			<section className='flex items-center ml-auto relative'>
 				<ThemeModeButton />
 				<PopoverMenu />
