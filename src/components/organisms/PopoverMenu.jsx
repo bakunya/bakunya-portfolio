@@ -29,7 +29,7 @@ const PopoverMenu = () => {
 				<ListIcon size={ 20 } />
 			</Popover.Button>
 			<Popover.List className={ `top-[55px] ${id}` } show={ show }>
-				<a href="https://bblog.pages.dev/" target="_blank" className={ `main-theme-typography transition-main rounded-md p-2 w-full ${id}` }>Blogs</a>
+				<a href="#" className={ `main-theme-typography transition-main rounded-md p-2 w-full ${id}` }>Blogs</a>
 				<Link to="/experience" className={ `main-theme-typography transition-main rounded-md p-2 w-full mt-2 ${id}` }>Experience</Link>
 				<Link to="/portfolio" className={ `main-theme-typography transition-main rounded-md p-2 w-full mt-2 ${id}` }>Projects</Link>
 			</Popover.List>
